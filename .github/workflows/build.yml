@@ -24,16 +24,11 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-      working-directory: PrimaCartsApp   # Sesuaikan jika nama foldernya berbeda
-
     - name: Build Debug APK with Gradle
       run: ./gradlew assembleDebug
-      working-directory: PrimaCartsApp   # Sesuaikan jika nama foldernya berbeda
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
-        path: PrimaCartsApp/app/build/outputs/apk/debug/app-debug.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
