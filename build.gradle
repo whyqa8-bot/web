@@ -1,20 +1,4 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.4'
-    }
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
+// Kosongkan atau biarkan file build.gradle root hanya berisi task clean standar berikut:
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
